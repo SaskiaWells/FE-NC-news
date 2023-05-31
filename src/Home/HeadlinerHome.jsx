@@ -1,36 +1,47 @@
-import { useState, useEffect } from "react"
-import '../css/Headliner.css'
-
+import { useState, useEffect } from "react";
+import "../css/Headliner.css";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { ArticleContext } from "../../Utils/articleContext";
 
 function HeadlinerHome({ articles }) {
-    const [headliner, setHeadliner] = useState({})
+  const [headliner, setHeadliner] = useState({});
+  const navigate = useNavigate();
+  const { setArticleID } = useContext(ArticleContext);
 
+  useEffect(() => {
+    if (articles.length !== 0) {
+      const headliner = articles.reduce((prev, current) =>
+        prev.comment_count > current.comment_count ? prev : current
+      );
 
+      setHeadliner(headliner);
+    }
+  }, [articles]);
 
- useEffect(() => {
-   if (articles.length !== 0){
-     const headliner = articles.reduce((prev, current) =>
-      prev.comment_count > current.comment_count ? prev : current
-            );   
-            
-            setHeadliner(headliner)
-        };
- }, [articles]);
+  function handleClick(event) {
+    event.preventDefault();
+    setArticleID(event.currentTarget.getAttribute("name"));
+    navigate(`/articles/${event.currentTarget.getAttribute("name")}`);
+  }
 
-    
-    return (
-        <>
-            <section id='headliner' >
-            <img id='headliner-img' src={headliner.article_img_url} alt={headliner.title} />
-                <ul>
-                    <h2>Headliner</h2>
-            <li id='headliner-title'>{headliner.title}</li>
-            <li id='hedliner-topic'>{headliner.topic}</li>
-                <li id='headliner-author'>{headliner.author}</li>
-            </ul>
-            </section>
-        </>
-    );
+  return (
+    <>
+      <section id="headliner" name={headliner.article_id} onClick={handleClick}>
+        <img
+          id="headliner-img"
+          src={headliner.article_img_url}
+          alt={headliner.title}
+        />
+        <ul>
+          <h2>Headliner</h2>
+          <li id="headliner-title">{headliner.title}</li>
+          <li id="hedliner-topic">{headliner.topic}</li>
+          <li id="headliner-author">{headliner.author}</li>
+        </ul>
+      </section>
+    </>
+  );
 }
 
-export default HeadlinerHome
+export default HeadlinerHome;
