@@ -1,0 +1,29 @@
+#headliner {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ border: 1px solid black;
+ display: flex;
+}
+
+#headliner-img {
+  width: 55%;
+  height: 300px;
+}
+
+#headliner-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#hedliner-topic {
+  font-size: 18px;
+  color: #999;
+  margin: 5px 0;
+}
+
+#headliner-author {
+  font-size: 16px;
+  margin: 5px 0;
+}

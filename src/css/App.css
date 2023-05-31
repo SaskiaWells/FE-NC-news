@@ -1,0 +1,9 @@
+
+.container {
+  display: flex;
+}
+
+HeadlinerHome,
+TopStoriesHome {
+  flex: 1;
+}
