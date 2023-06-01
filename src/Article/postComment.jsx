@@ -14,9 +14,10 @@ function PostComment({ setComments }) {
     function handleSubmit(event) {
         
         event.preventDefault()
-        PostCommentByArticle({ 'body': commentBody, 'author': 'cooljmessy', }, articleid).then((newComment) => {
+        PostCommentByArticle({ 'body': commentBody, 'author': 'cooljmessy', }, articleid).then(({ comment }) => {
+
             setComments((currComments) => {
-                return[newComment, ...currComments]
+                return[comment, ...currComments]
             })
         }).then(() => {
             setCommentBody('')
