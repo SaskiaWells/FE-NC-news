@@ -14,3 +14,21 @@ HeadlinerHome,
 TopStoriesHome {
   flex: 1;
 }
+
+@media (max-width: 760px) {
+  .container {
+    flex-direction: column;
+  }
+  section {
+    font-size: 14px;
+  }
+  #top-story-imgs {
+    width: 100%;
+   height: auto;
+  }
+  #top-stories {
+  display: flex;
+  flex-direction: column;
+  width: 40%
+}
+}
