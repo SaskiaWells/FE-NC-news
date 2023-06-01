@@ -28,7 +28,7 @@ function Article() {
         <img src={article.article_img_url} alt={article.title} />
         <p>{article.body}</p>
         <Votes/>
-        <Comments/>
+        <Comments articleid={articleid}/>
     </section>);
 }
 

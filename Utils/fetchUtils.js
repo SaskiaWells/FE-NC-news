@@ -23,3 +23,14 @@ export const fetchArticleById = (id) => {
       console.log(err);
     });
 };
+
+export const fetchCommentsById = (id) => {
+  return NCnewsAPI.get(`/api/articles/${id}/comments`)
+    .then((res) => {
+      return res.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
