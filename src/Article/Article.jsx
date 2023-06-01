@@ -27,7 +27,7 @@ function Article() {
         <h3 id='article-author'>By {article.author}</h3>
         <img src={article.article_img_url} alt={article.title} id='article-img' />
         <p id='article-body'>{article.body}</p>
-        <Votes/>
+        <Votes setArticle={setArticle} article={article}/>
         <Comments articleid={articleid}/>
     </section>);
 }
