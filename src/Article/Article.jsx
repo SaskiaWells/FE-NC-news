@@ -23,10 +23,10 @@ function Article() {
 
 
     return (<section>
-        <h2>{article.title}</h2>
-        <h3>By {article.author}</h3>
-        <img src={article.article_img_url} alt={article.title} />
-        <p>{article.body}</p>
+        <h2 id='article-title '>{article.title}</h2>
+        <h3 id='article-author'>By {article.author}</h3>
+        <img src={article.article_img_url} alt={article.title} id='article-img' />
+        <p id='article-body'>{article.body}</p>
         <Votes/>
         <Comments articleid={articleid}/>
     </section>);
