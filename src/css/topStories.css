@@ -1,0 +1,36 @@
+
+
+#top-stories {
+  display: flex;
+  flex-direction: column;
+  width: 60%
+}
+
+#top-story {
+  display: flex;
+  cursor: pointer
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 5px;
+}
+
+#topstory-title {
+  font-weight: bold;
+
+}
+
+#topstory-topic {
+  color: #999;
+}
