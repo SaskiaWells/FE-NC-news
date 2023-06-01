@@ -19,4 +19,9 @@ TopStoriesHome {
     width: 100%;
    height: auto;
   }
+  #top-stories {
+  display: flex;
+  flex-direction: column;
+  width: 40%
+}
 }
