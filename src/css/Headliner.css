@@ -4,6 +4,7 @@
   margin: 0;
  border: 1px solid black;
  display: flex;
+ cursor: pointer
 }
 
 #headliner-img {
@@ -15,6 +16,7 @@
   font-size: 24px;
   font-weight: bold;
   margin: 10px 0;
+ 
 }
 
 #hedliner-topic {
@@ -27,3 +29,5 @@
   font-size: 16px;
   margin: 5px 0;
 }
+
+

@@ -13,3 +13,13 @@ export const fetchArticles = () => {
       console.log(err);
     });
 };
+
+export const fetchArticleById = (id) => {
+  return NCnewsAPI.get(`/api/articles/${id}`)
+      .then((res) => {
+      return res.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};

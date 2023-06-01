@@ -8,6 +8,7 @@
 
 #top-story {
   display: flex;
+  cursor: pointer
 }
 
 img {
@@ -27,6 +28,7 @@ li {
 
 #topstory-title {
   font-weight: bold;
+
 }
 
 #topstory-topic {
