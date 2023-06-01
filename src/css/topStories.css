@@ -1,32 +1,4 @@
-/* #top-stories{
-  display: flex;
-}
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-img {
-  width: 35%;
-  height: auto;
-}
-
-li {
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-#topstory-title {
-  font-weight: bold;
-}
-
-#topstory-topic {
-  color: #999;
-} */
 
 #top-stories {
   display: flex;

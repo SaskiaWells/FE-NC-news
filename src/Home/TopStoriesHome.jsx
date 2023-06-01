@@ -21,7 +21,7 @@ function TopStoriesHome({articles}) {
             <article id="top-story">
               <img
                 className="top-story"
-                id={topstory.article_id}
+                id='top-story-imgs'
                 src={topstory.article_img_url}
                 alt={topstory.title}
                   />
