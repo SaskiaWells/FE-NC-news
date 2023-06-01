@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { fetchCommentsById } from "../../Utils/fetchUtils";
 import { useState } from "react";
 import CommentCard from "./commentCard";
+import PostComment from "./postComment";
 
 function Comments({articleid}) {
   const [Comments, setComments] = useState([])
@@ -25,6 +26,7 @@ function Comments({articleid}) {
   return (
     <>
       <h3>Comments</h3>
+      <PostComment setComments={setComments} />
       <ul>
         {visibleComments.map((comment) => {
           return <CommentCard comment={comment} />;
