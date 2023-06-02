@@ -10,8 +10,22 @@ function TopStoriesHome({ articles }) {
   const { setArticleID } = useContext(ArticleContext);
 
   useEffect(() => {
+ const filteredByCheifEditor = articles.filter((artticle) => {
+   return artticle.author === "grumpy19";
+ });
+ const EditorsPick = filteredByCheifEditor.reduce((prev, current) =>
+   prev.comment_count > current.comment_count ? prev : current
+ );
+    const headliner = articles.reduce((prev, current) =>
+      prev.comment_count > current.comment_count ? prev : current
+    );
+
     const topStoriesarray = articles.filter((article) => {
-      return article.comment_count > 6 && article.comment_count < 9;
+      return (
+        article.comment_count > 11 &&
+        article.article_id !== headliner.article_id &&
+        article.article_id !== EditorsPick.article_id
+      );
     });
     setTopStories(topStoriesarray);
   }, [articles]);
@@ -29,6 +43,7 @@ function TopStoriesHome({ articles }) {
         {topStories.map((topstory) => {
           return (
             <article
+              key={topstory.article_id}
               id="top-story"
               name={topstory.article_id}
               onClick={handleClick}

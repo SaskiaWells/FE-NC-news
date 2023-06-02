@@ -9,8 +9,6 @@ return NCnewsAPI.patch(`/api/articles/${id}`, obj)
       .then((res) => {
       return res.data;
     })
-    .catch((err) => {
-      console.log(err);
-    });
 
 }
+
