@@ -1,4 +1,6 @@
 function Votes() {
+
+    
     return (<>
     these are the votes</>)
 }

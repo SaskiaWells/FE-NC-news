@@ -4,6 +4,7 @@ import { fetchArticleById } from "../../Utils/fetchUtils";
 import Votes from "./votes";
 import Comments from "./Comments";
 
+
 function Article() {
       const { articleid } = useContext(ArticleContext);
     const [article, setArticle] = useState({}) 

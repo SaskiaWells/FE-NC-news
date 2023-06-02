@@ -7,22 +7,28 @@ import { Route, Routes } from "react-router-dom";
 import Topic from "./topic/Topic";
 import Article from "./Article/Article";
 import { ArticleContext } from "../Utils/articleContext";
+import { UserContext } from "../Utils/userContext"
+import Users from "./Users/Users";
 
 function App() {
   const [topic, setTopic] = useState({});
   const [articleid, setArticleID] = useState({});
+  const [user, setUser] = useState('guest')
 
   return (
     <>
-      <ArticleContext.Provider value={{ articleid, setArticleID }}>
+      <UserContext.Provider value={{ user, setUser }}>
+      <ArticleContext.Provider value={{ articleid, setArticleID, }}>
         <Header />
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path={`/topics/${topic}`} element={<Topic />} />
           <Route path="/articles/:article_id" element={<Article />} />
+            <Route path='/login' element={ <Users/>} />
         </Routes>
-      </ArticleContext.Provider>
+        </ArticleContext.Provider>
+      </UserContext.Provider>
     </>
   );
 }
