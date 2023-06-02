@@ -16,7 +16,7 @@ function App() {
   const [user, setUser] = useState('guest')
 
   return (
-    <>
+    
       <UserContext.Provider value={{ user, setUser }}>
       <ArticleContext.Provider value={{ articleid, setArticleID, }}>
         <Header />
@@ -29,7 +29,7 @@ function App() {
         </Routes>
         </ArticleContext.Provider>
       </UserContext.Provider>
-    </>
+    
   );
 }
 

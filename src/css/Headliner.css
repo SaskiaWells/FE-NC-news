@@ -2,9 +2,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
- border: 1px solid black;
  display: flex;
- cursor: pointer
+ cursor: pointer;
+ background-color: #EDD3C4;
+    padding:10px
+}
+
+#headliner-title:hover{
+   color: #7D4F50;
 }
 
 #headliner-img {
@@ -21,13 +26,14 @@
 
 #hedliner-topic {
   font-size: 18px;
-  color: #999;
+  color: #5C9EAD;
   margin: 5px 0;
 }
 
 #headliner-author {
   font-size: 16px;
   margin: 5px 0;
+  color:#0E3B43
 }
 
 

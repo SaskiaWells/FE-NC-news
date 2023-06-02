@@ -24,7 +24,7 @@ function Home() {
 
     return (
         <>
-            <div className="container">
+        
         <HeadlinerHome
         
           id="headliner"
@@ -36,7 +36,6 @@ function Home() {
           id="top-stories"
           articles={articles}
                 />
-            </div>
         <EditorsPickHome  articles={articles} />
         <OtherArticles id="other-articles" articles={articles} />
       </>

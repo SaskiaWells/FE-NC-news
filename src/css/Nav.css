@@ -1,0 +1,45 @@
+#login{
+    background-color: #553739;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#login-button{
+    color: #B8CCC5;
+     text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: medium;
+ border:1px solid #7D4F50;
+ padding: 10px 20px;
+
+}
+
+#logout-button{
+    background-color: transparent;
+    border:1px solid #7D4F50;
+    color: #B8CCC5;
+      font-family: Georgia, serif;
+      font-size: medium;
+       padding: 10px 20px;
+       cursor: pointer;
+}
+
+#nav-bar{
+    background-color: #F5E7E0;
+    margin: 10px 0;
+    text-align: center;
+    padding: 10px 20px;
+    
+}
+
+#home{
+   color: #553739 ;
+   font-family: Georgia, serif;
+      font-size: medium;
+      text-decoration: none;
+}
+
+#home:hover{
+   color: #7D4F50;
+}

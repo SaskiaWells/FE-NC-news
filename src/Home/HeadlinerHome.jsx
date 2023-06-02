@@ -26,21 +26,22 @@ function HeadlinerHome({ articles }) {
   }
 
   return (
-    <>
-      <section id="headliner" name={headliner.article_id} onClick={handleClick}>
+    <section>
+      <h2>Headliner</h2>
+      <article id="headliner" name={headliner.article_id} onClick={handleClick}>
         <img
           id="headliner-img"
           src={headliner.article_img_url}
           alt={headliner.title}
         />
         <ul>
-          <h2>Headliner</h2>
+          
           <li id="headliner-title">{headliner.title}</li>
           <li id="hedliner-topic">{headliner.topic}</li>
           <li id="headliner-author">{headliner.author}</li>
         </ul>
-      </section>
-    </>
+      </article>
+    </section>
   );
 }
 
