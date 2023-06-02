@@ -48,6 +48,7 @@ function OtherArticles({ articles }) {
         {otherArticles.map((otherArticle) => {
           return (
             <article
+              key={otherArticle.article_id}
               id="other-article"
               name={otherArticle.article_id}
               onClick={handleClick}
