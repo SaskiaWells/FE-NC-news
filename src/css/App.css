@@ -6,9 +6,10 @@ h3 {
   text-decoration: underline;
 }
 
-.container {
-  display: flex;
+body {
+  background-color: #0E3B43;
 }
+
 
 HeadlinerHome,
 TopStoriesHome {
@@ -31,4 +32,12 @@ TopStoriesHome {
   flex-direction: column;
   width: 40%
 }
+}
+section {
+  padding: 10px;
+  background-color: #F5E7E0;
+}
+
+*{
+  font-family: Georgia, serif;
 }

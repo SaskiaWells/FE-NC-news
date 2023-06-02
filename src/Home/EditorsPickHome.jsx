@@ -28,8 +28,9 @@ function EditorsPickHome({ articles }) {
     navigate(`/articles/${event.currentTarget.getAttribute("name")}`);
   }
 
-  return (
-    <section
+  return ( <section>
+  <h2>Editors pick!</h2>
+    <article
       id="editors-pick"
       name={editorsPick.article_id}
       onClick={handleClick}
@@ -40,12 +41,13 @@ function EditorsPickHome({ articles }) {
         alt={editorsPick.title}
       />
       <ul id="editorsPick">
-        <h2>Editors pick!</h2>
+       
         <li id="editors-pick-title">{editorsPick.title}</li>
         <li id="editors-pick-topic">{editorsPick.topic}</li>
         <li id="editors-pick-author">{editorsPick.author}</li>
       </ul>
-    </section>
+    </article>
+  </section>
   );
 }
 export default EditorsPickHome;

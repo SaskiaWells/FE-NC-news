@@ -1,7 +1,15 @@
 #editors-pick {
   display: flex;
-  cursor: pointer
+  cursor: pointer;
+  
+    background-color: #EDD3C4;
+    padding:10px
 }
+
+#editors-pick-title:hover{
+   color: #7D4F50;
+}
+
 
 #editors-pick-img {
   width: 50%;
