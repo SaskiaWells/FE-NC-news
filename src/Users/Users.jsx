@@ -2,7 +2,7 @@ import { useEffect, useState, useContext} from "react"
 import { fetchArticles } from "../../Utils/fetchUtils"
 import { UserContext } from "../../Utils/userContext"
 import { useNavigate } from "react-router-dom";
-
+import '../css/Login.css'
 
 function Users() {
     const {setUser, user} = useContext(UserContext)
@@ -36,23 +36,23 @@ function Users() {
 
     
     return (
-      <>
-            <h2>User page</h2>
-            <h3>Click a user to login</h3>
-            <section >
+      <section>
+            <h2 id='user-page-title'>User page</h2>
+            <h3 id='instructions'>Click a user to login</h3>
+            <section id='users'>
                 {users.map((user) => {
                     return (
                         <ul >
-                            <img
+                            <img id='user-img'
                                 src="https://img.freepik.com/premium-vector/empty-face-icon-avatar-with-black-hair-vector-illustration_601298-13402.jpg?w=2000"
                                 alt={user}
                             />
-                            <button id={user} onClick={handleClick}>{user}</button>
+                            <button id={user} onClick={handleClick} className='user-button'>{user}</button>
                         </ul>
                     )
                 })}
         </section>
-      </>
+      </section>
     );
 }
 

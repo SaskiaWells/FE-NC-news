@@ -47,13 +47,14 @@ function Votes({ setArticle, article }) {
 
   return (<section id='article-votes'>
     <p>Do you like this article?</p>
-    {showMessage && (
-      <VoteMessage message={`you have reached the maximum number of ${vote} votes for this article`}/>
-      )}
+   
         <button id='vote-button'onClick={handleUpClick}>
       <FaThumbsUp /></button>
       <button onClick={handleDownClick} id='vote-button'><FaThumbsDown /></button>
-        <p>Votes: {article.votes}</p>
+    <p>Votes: {article.votes}</p>
+     {showMessage && (
+      <VoteMessage message={`you have reached the maximum number of ${vote} votes for this article`}/>
+      )}
     </section>)
 
 }

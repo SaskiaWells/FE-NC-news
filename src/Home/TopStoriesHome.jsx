@@ -38,7 +38,7 @@ function TopStoriesHome({ articles }) {
 
   return (
     <section>
-      <h3>Top Stories</h3>
+      <h2>Top Stories</h2>
       <div id="top-stories">
         {topStories.map((topstory) => {
           return (

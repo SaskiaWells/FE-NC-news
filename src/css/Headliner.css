@@ -1,11 +1,14 @@
 #headliner {
   list-style: none;
-  padding: 0;
-  margin: 0;
  display: flex;
  cursor: pointer;
  background-color: #EDD3C4;
     padding:10px
+}
+
+#headliner-header{
+   text-align: center;
+   font-family: 'Cheltenham', serif;
 }
 
 #headliner-title:hover{
@@ -13,12 +16,12 @@
 }
 
 #headliner-img {
-  width: 55%;
-  height: 300px;
+  width: 50%;
+  height: auto;
 }
 
 #headliner-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   margin: 10px 0;
  
@@ -26,7 +29,7 @@
 
 #hedliner-topic {
   font-size: 18px;
-  color: #5C9EAD;
+  color: #7d869c;
   margin: 5px 0;
 }
 

@@ -27,7 +27,7 @@ function HeadlinerHome({ articles }) {
 
   return (
     <section>
-      <h2>Headliner</h2>
+      <h2 id='headliner-header'>Headliner</h2>
       <article id="headliner" name={headliner.article_id} onClick={handleClick}>
         <img
           id="headliner-img"
