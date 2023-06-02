@@ -10,7 +10,7 @@ function Votes({ setArticle, article }) {
           return {...currArticle, votes:currArticle.votes + 1}
         })
         
-        patchArticle(article.article_id)
+        patchArticle(article.article_id, { inc_votes: 1 });
     }
 
     function handleDownClick() {
@@ -18,7 +18,7 @@ function Votes({ setArticle, article }) {
     return { ...currArticle, votes: currArticle.votes - 1 };
     });
 
-    patchArticle(article.article_id);
+    patchArticle(article.article_id, { inc_votes: 1 });
     }
 
     return (<section id='article-votes'>
